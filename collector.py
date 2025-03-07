@@ -389,7 +389,7 @@ class AristaMetricsCollector(object):
         )
 
         measurements = ["inputCurrent", "inputVoltage", "outputCurrent", "outputPower"]
-        data = self.switch_command("show environment power")
+        data = self.switch_command("show system environment power")
         for psu_id, psu in data["result"][0]["powerSupplies"].items():
             labels = {
                 "state": psu["state"],
